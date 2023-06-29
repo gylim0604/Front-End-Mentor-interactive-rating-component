@@ -24,12 +24,16 @@ main{
     place-content: center;
     padding: 0 1.5rem;
 }
-#rating{
+#rating, #thank-you{
     max-width: 500px;
     background-color: var(--card--bg);
     padding: 1.5rem 1rem;
     border-radius: 15px;
 }   
+
+#rating {
+    display: none;
+}
 
 #rating > img{
     padding: 1rem;
@@ -37,7 +41,7 @@ main{
     border-radius: 50%;
 }
 
-#rating > h4{
+h4{
     color: var(--white);
     margin: 1.5rem 0;
     font-weight: 700;
@@ -76,5 +80,24 @@ main{
 
 
 #thank-you{
-    display: none;
+    text-align: center;
 }
+
+#thank-you > img {
+    margin: 1.25rem;
+}
+
+#thank-you > .rating-text {
+    background-color: var(--dark--blue);
+    color: var(--orange);
+    padding: .5rem 1rem;
+    border-radius: 25px;
+    width: fit-content;
+    margin: auto;
+}
+
+#thank-you > .thank-you-text {
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
