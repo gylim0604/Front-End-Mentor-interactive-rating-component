@@ -31,7 +31,7 @@ main{
     border-radius: 15px;
 }   
 
-#rating {
+#thank-you {
     display: none;
 }
 
@@ -57,7 +57,7 @@ h4{
     justify-content: space-evenly;
     margin: 1.75rem 0;
 }
-#rating > .selection-wrapper > a {
+#rating > .selection-wrapper > label {
     text-decoration: none;
     height: 3rem;
     width: 3rem;
@@ -67,6 +67,21 @@ h4{
     color: var(--light--grey);
     background-color: var(--dark--blue);
 }
+
+#rating > .selection-wrapper > input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+#rating > .selection-wrapper > input[type="radio"]:focus  + label {
+    border: 1px dashed var(--orange);
+}
+
+#rating > .selection-wrapper > input[type="radio"]:checked + label {
+    filter: brightness(1.4);
+}
+
 #rating > button {
     background-color: var(--orange);
     color: var(--white);
@@ -87,7 +102,7 @@ h4{
     margin: 1.25rem;
 }
 
-#thank-you > .rating-text {
+#thank-you > #rating-text {
     background-color: var(--dark--blue);
     color: var(--orange);
     padding: .5rem 1rem;
