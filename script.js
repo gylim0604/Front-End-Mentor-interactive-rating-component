@@ -7,7 +7,11 @@ const onSubmit = () => {
     const ratingText = document.getElementById('rating-text');
     const value = document.querySelector('input[name="rating"]:checked').value
     ratingText.innerText = `You selected ${value} out of 5`
-    ratingCard.style.display = 'none';
-    thankyouCard.style.display = 'block'
+    ratingCard.classList.add('slide-up')
+    setTimeout(()=> {
+        ratingCard.style.display = 'none'
+        thankyouCard.style.display = 'block'
+        thankyouCard.classList.add('slide-down')
+    },1500)
 }
 

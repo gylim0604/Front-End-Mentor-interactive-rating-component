@@ -31,6 +31,36 @@ main{
     border-radius: 15px;
 }   
 
+
+@keyframes slideOutUp {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+  
+    to {
+        visibility: hidden;
+        transform: translate3d(0, -200%, 0);
+    }
+}
+
+.slide-up{
+    animation: slideOutUp 2s forwards;
+}
+
+@keyframes slideDown {
+    from {
+      transform: translate3d(0, -200%, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+.slide-down{
+    animation: slideDown 2s forwards;
+}
+
 #thank-you {
     display: none;
 }
